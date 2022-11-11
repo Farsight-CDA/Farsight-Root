@@ -4,12 +4,12 @@
     export let description: string;
 </script>
 
-<div class="h-full flex flex-col justify-between items-center border-solid border p-3 rounded-2xl">
-    <div class="flex justify-center items-center secondary w-20 h-20 border-solid border rounded-max border-white p-4">
+<div class="secondary h-full flex flex-col justify-between items-center border-solid border p-3 rounded-2xl">
+    <div class="flex justify-center items-center bg-white w-20 h-20 border-solid border rounded-max border-white p-4">
         <img class="w-full h-full" src={image} alt="">
     </div>
 
-    <hr /> 
+    <hr class="bg-white w-3/4 my-3" /> 
 
     <h2>
         <b>{title}</b>
