@@ -1,15 +1,42 @@
 .primary {
-	background-color: #242424;
+	background-color: #282D3C;
+	background-image: linear-gradient(to top left, #1c1f2a , #696c77);
+
 }
 
 .secondary {
-	background-color: #303030;
+	background-color: #274D5C;
+	background-image: linear-gradient(to top left, #1f3e4a , #52717d);
 }
 
 .accent {
-	background-color: #2ae1de;
+	background-color: #282D3C;
+}
+.accent-yellow {
+	background-color: #E9A71F;
+}
+
+.accent-yellow-gradient {
+	background-color: #E9A71F;
+	background-image: linear-gradient(to top left, #a37516 , #f0c162);
+}
+
+.accent-red {
+	background-color: #E84011;
+}
+
+.accent-red-gradient {
+	background-color: #E84011;
+	background-image: linear-gradient(to top left, #a22d0c , #ef7958);
+}
+
+hr.primary {
+	border: 0;
+	height: 3px;
+	background: #696c77;
+	background-image: linear-gradient(to right, #282D3C, #696c77, #282D3C);
 }
 
 body {
-	color: white;
+	color: whitesmoke;
 }
