@@ -1,7 +1,6 @@
 <script lang="ts">
     export let image: string;
-    export let title: string;
-    export let description: string;
+    export let name: string;
 </script>
 
 <div class="accent h-full flex flex-col justify-between items-center border-solid border p-3 rounded-2xl">
@@ -12,10 +11,10 @@
     <hr class="primary w-3/4 my-3" />
 
     <h2>
-        <b>{title}</b>
+        <b>{name}</b>
     </h2>
 
-    <p>{description}</p>
+    <slot></slot>
 </div>
 
 <style>

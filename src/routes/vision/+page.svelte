@@ -4,15 +4,21 @@
     import wallet from "$lib/images/wallet.svg";
     import leon from "$lib/images/leon.png";
     import empty from "$lib/images/empty.png";
+
+    import people from "$lib/images/people.png";
+
     import Advantage from "./Advantage.svelte";
     import AboutUs from "./AboutUs.svelte";
-
 
 </script>
 
 <div class="mx-10  mt-3">
     <div class="flex flex-col items-center justify-center accent h-max p-2 rounded-2xl">
-        <h1 class="font-bold text-5xl">Crypto addresses are UGLY!</h1>
+        <h1 class="font-bold text-5xl">Crypto needs to be for everyone</h1>
+
+        <img class="mt-2" src={people} alt=""/>
+
+
 
         <div class="mt-3 text-center">
             <p>Yes they are functional and a must for crypto to work.</p>
@@ -57,16 +63,31 @@
         <li class="p-3">
             <AboutUs
                     image={leon}
-                    title="Leon"
-                    description="I'm 23 years old. Currently I'm still studying computer science at the Technical University of Darmstadt. Although I have been writing software for 3 years, my crypto journey started only at the beginning of 2021. I am working full time on waiver since october 2022"
-            />
+                    name="Leon Wenderoth (23)"
+            >
+                Currently I'm still studying computer science at the Technical University of Darmstadt. Although I have been writing software for 3 years, my crypto journey started only at the beginning of 2021. I am working full time on waiver since october 2022
+            </AboutUs>
         </li>
         <li class="p-3">
             <AboutUs
                     image={empty}
-                    title="Elias"
-                    description="Names and wallets have to be closely coupled. Everyone with a wallet should also have a name for that wallet!"
-            />
+                    name="Elias Wolf (21)"
+            >
+                <div>
+                    <p>
+                        Computer Science Undergraduate at the technical university Darmstadt.
+                    </p>
+   
+                </div>
+
+                5 years experience in software development | 3 years experience in crypto.
+                
+                <p>
+                    Implementation of a mining pool software for <a href="https://www.teepool.com/">Teepool</a> |
+                    Passionate blockchain analyst via <a href="https://flipsidecrypto.xyz/Playwo">FlipsideCrypto</a> |
+                    Flipside <a href="https://flipsidecrypto.xyz/buildathon">Build-A-Thon</a> category winner team leader.
+                </p>
+            </AboutUs>
         </li>
     </ul>
 </div>
@@ -75,5 +96,9 @@
 <style>
     .auto-cols {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    a {
+        color: greenyellow;
     }
 </style>
