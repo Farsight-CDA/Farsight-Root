@@ -21,6 +21,14 @@
 	let xWall: number = 1;
 	let yWall: number = 1;
 
+	let mouseX: number = -1;
+	let mouseY: number = -1;
+
+	function handleMouseMove(o: MouseEvent) {
+		mouseX = o.offsetX;
+		mouseY = o.offsetY;
+	}
+
 	onMount(() => {
 		function makeIcon(image: string): IconAnimationState {
 			var img = new Image();
@@ -33,6 +41,7 @@
 				velY: 1.3 * Math.random() / 1000,
 				radius: iconSize * (Math.random() / 2 + 0.25) / 10,
 				mass: 0.1,
+				hover: false
 			}
 		}	
 
@@ -144,6 +153,21 @@
 
 			ctx.clearRect(0, 0, width, height);
 
+			icons.forEach(icon => {
+				const absoluteRadiusX = icon.radius * width;
+				const absoluteRadiusY = widthToHeightRatio * icon.radius * height;
+
+				const absoluteMiddleX = icon.posX * width;
+				const absoluteMiddleY = widthToHeightRatio * icon.posY * height;
+
+				if (Math.abs(absoluteMiddleX - mouseX) < absoluteRadiusX && Math.abs(absoluteMiddleY - mouseY) < absoluteRadiusY) {
+					icon.hover = true;
+				}
+				else {
+					icon.hover = false;
+				}
+			});
+
 			icons.sort((_a, _b) => _a.posX - _b.posX).forEach((left, i) => {
 
 				icons.sort((_a, _b) => _a.posX - _b.posX).slice(i).forEach(right => {
@@ -155,7 +179,15 @@
 					if (distance <= lineThreshold) {
 						ctx.beginPath();
 
-						ctx.strokeStyle = lineColor;
+						if (left.hover || right.hover) {
+							ctx.strokeStyle = "#ffffff";
+							ctx.lineWidth = 6;
+						}
+						else {
+							ctx.strokeStyle = lineColor;
+							ctx.lineWidth = 1;
+						}
+
 						ctx.moveTo(left.posX * width, left.posY * height * widthToHeightRatio);
 						ctx.lineTo(right.posX * width, right.posY * height * widthToHeightRatio);
 
@@ -164,10 +196,22 @@
 				});
 			});
 
-
 			icons.forEach(icon => {
-				const absoluteX = icon.posX * width - icon.radius * width;
-				const absoluteY = widthToHeightRatio * (icon.posY * height - icon.radius * height);
+				const absoluteRadiusX = icon.radius * width;
+				const absoluteRadiusY = widthToHeightRatio * icon.radius * height;
+
+				const absoluteMiddleX = icon.posX * width;
+				const absoluteMiddleY = widthToHeightRatio * icon.posY * height;
+
+				const absoluteX = absoluteMiddleX - absoluteRadiusX;
+				const absoluteY = absoluteMiddleY - absoluteRadiusY;
+
+				if (Math.abs(absoluteMiddleX - mouseX) < absoluteRadiusX && Math.abs(absoluteMiddleY - mouseY) < absoluteRadiusY) {
+					icon.hover = true;
+				}
+				else {
+					icon.hover = false;
+				}
 
 				ctx.drawImage(icon.image, absoluteX, absoluteY, 2 * icon.radius * width, 2 * icon.radius * height * widthToHeightRatio);
 			});
@@ -188,13 +232,16 @@
 
 			mass: number;
 			radius: number;
+
+			hover: boolean;
 		}
 	});
 </script>
 
 <div class="w-full h-big" bind:this={container}>
     <canvas
-            bind:this={canvas}
+		bind:this={canvas}
+		on:mousemove={handleMouseMove}
     >
     </canvas>
 </div>
