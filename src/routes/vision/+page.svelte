@@ -15,17 +15,16 @@
 
 </script>
 
-<div class="mx-10 mt-3">
+<div class="mx-10 mt-3 relative">
 
-    <div class="flex flex-row justify-between items-center">
-        <div></div>
-        <div>
+    <a  class="w-12 absolute top-5 right-5"
+        href="https://twitter.com/FarsightNames" target="_blank" rel="noreferrer">
+        <img src={twitter} alt=""/>
+    </a>
+
+    <div class="flex flex-col justify-between items-center">
             <h1 class="font-bold text-5xl">Farsight - Names</h1>
             <p class="text-xl mt-2">A cross-chain aware address labelling service</p>
-        </div>
-        <a href="https://twitter.com/FarsightNames" target="_blank" rel="noreferrer">
-            <img class="w-12 cursor-pointer" src={twitter} alt=""/>
-        </a>
     </div>
 
     <br>
