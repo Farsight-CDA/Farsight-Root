@@ -1,7 +1,6 @@
 <script lang="ts">
     export let image: string;
     export let title: string;
-    export let description: string;
 </script>
 
 <div class="hoverable accent h-full flex flex-col justify-between items-center border-solid border p-3 rounded-2xl">
@@ -15,7 +14,9 @@
         <b>{title}</b>
     </h2>
 
-    <p>{description}</p>
+    <slot>
+
+    </slot>
 </div>
 
 <style>
