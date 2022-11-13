@@ -117,7 +117,7 @@
                     image={leon}
                     name="Leon Wenderoth (23)"
             >
-                Currently I'm still studying computer science at the Technical University of Darmstadt. Although I have been writing software for 3 years, my crypto journey started only at the beginning of 2021. I am working full time on waiver since october 2022
+                Currently I'm still studying computer science at the Technical University of Darmstadt. Although I have been writing software for 3 years, my crypto journey started only at the beginning of 2021. I am working full time on Farsight since october 2022
             </AboutUs>
         </li>
         <li class="p-3">
