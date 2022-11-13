@@ -28,6 +28,10 @@
 		mouseX = o.offsetX;
 		mouseY = o.offsetY;
 	}
+	function handleMouseLeave() {
+		mouseX = -1;
+		mouseY = -1;
+	}
 
 	onMount(() => {
 		function makeIcon(image: string): IconAnimationState {
@@ -242,6 +246,7 @@
     <canvas
 		bind:this={canvas}
 		on:mousemove={handleMouseMove}
+		on:mouseleave={handleMouseLeave}
     >
     </canvas>
 </div>
