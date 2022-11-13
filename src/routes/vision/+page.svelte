@@ -6,9 +6,11 @@
     import empty from "$lib/images/empty.png";
 
     import people from "$lib/images/people.png";
+    import lookup from "$lib/images/lookup.png";
 
     import Advantage from "./Advantage.svelte";
     import AboutUs from "./AboutUs.svelte";
+	import CrossChainVisualization from "./CrossChainVisualization.svelte";
 
 </script>
 
@@ -18,12 +20,16 @@
 
         <img class="mt-2" src={people} alt=""/>
 
-
+        <img class="mt-2 w-1/2" src={lookup} alt="">
 
         <div class="mt-3 text-center">
             <p>Yes they are functional and a must for crypto to work.</p>
             <p>But they are not pretty: You cannot remember, share or compare them easily.</p>
         </div>
+
+        <br>
+        <h1 class="font-bold text-5xl">The future is cross-chain</h1>
+        <CrossChainVisualization></CrossChainVisualization>
 
     </div>
 
