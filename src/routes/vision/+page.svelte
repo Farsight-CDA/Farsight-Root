@@ -14,13 +14,60 @@
 
 </script>
 
-<div class="mx-10  mt-3">
+<div class="mx-10 mt-3">
+
+    <div class="flex flex-col items-center justify-center ">
+        <h1 class="font-bold text-5xl">Farsight - Names</h1>
+        <p class="text-xl mt-2">A cross-chain aware address labelling service</p>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="accent rounded-2xl p-4">
+        <h2 class="font-bold text-3xl mb-2">The future of crypto is cross-chain</h2>
+        <hr class="my-3">
+        <div class="grid auto-cols-600">
+            <div>
+                <p>
+                    Every week we see new blockchains, protocols appear in the space.
+                    For some people all those new technologies are exciting, but the majority of users will only ever touch a small subset of all blockchains.
+                </p>
+                <br>
+                <b>We see a few issues that arise from having so many blockchains:</b>
+                <ul class="pl-6 list-disc">
+                    <li>
+                        Each chain comes with its own set of software
+                        => Wallets, DApps, ...
+                    </li>
+                    <li>
+                        Uncertainty around addresses
+                        => Which blockchain does each address belong to?
+                    </li>
+                    <li>
+                        Difficulty to understand the matter for less experienced users
+                    </li>
+                </ul>
+            </div>
+
+            <CrossChainVisualization></CrossChainVisualization>
+        </div>
+    </div>
+
+
+
+    <img class="mt-2 w-1/2" src={lookup} alt="">    <br>
+    <br>
+    <hr>
+    <br>
+
     <div class="flex flex-col items-center justify-center accent h-max p-2 rounded-2xl">
         <h1 class="font-bold text-5xl">Crypto needs to be for everyone</h1>
 
         <img class="mt-2" src={people} alt=""/>
 
-        <img class="mt-2 w-1/2" src={lookup} alt="">
+
 
         <div class="mt-3 text-center">
             <p>Yes they are functional and a must for crypto to work.</p>
@@ -28,8 +75,7 @@
         </div>
 
         <br>
-        <h1 class="font-bold text-5xl">The future is cross-chain</h1>
-        <CrossChainVisualization></CrossChainVisualization>
+
 
     </div>
 
@@ -103,9 +149,11 @@
     .auto-cols-250 {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-
     .auto-cols-350 {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    .auto-cols-600 {
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     }
 
     a {
