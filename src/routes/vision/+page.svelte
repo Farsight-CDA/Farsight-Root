@@ -4,6 +4,7 @@
     import wallet from "$lib/images/wallet.svg";
     import leon from "$lib/images/leon.png";
     import empty from "$lib/images/empty.png";
+    import logo from '$lib/images/logo.png';
 
     import lookup from "$lib/images/lookup.png";
 
@@ -14,6 +15,15 @@
 	import CrossChainVisualization from "./CrossChainVisualization.svelte";
 
 </script>
+
+<svelte:head>
+    <meta property="og:title" content="Farsight Names" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://farsight-names.de/vision" />
+    <meta property="og:image" content="https://farsight-names.de{logo}" />
+    <meta property="og:description" content="We want to make Web3 more accessible to everyone, let us sunset the days of cryptic addresses!" />
+    <meta name="theme-color" content="#FF0000">
+</svelte:head>
 
 <div class="mx-10 mt-3 relative">
 
