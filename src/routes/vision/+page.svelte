@@ -21,7 +21,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://farsight-names.de/vision" />
     <meta property="og:image" content="https://farsight-names.de{logo}" />
-    <meta property="og:description" content="We want to make Web3 more accessible to everyone, let us sunset the days of cryptic addresses!" />
+    <meta property="og:description" content="We want to make Web3 more accessible for everyone, let us sunset the days of cryptic addresses!" />
     <meta name="theme-color" content="#FF0000">
 </svelte:head>
 
