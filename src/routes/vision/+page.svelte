@@ -77,7 +77,7 @@
                     We need accessibility and ease of access. No compromises.
                 </p> 
             </div>
-            <div class="border border-solid m-2 rounded-xl">
+            <div class="border border-solid m-2 rounded-xl overflow-hidden">
                 <CrossChainVisualization></CrossChainVisualization>
             </div>
         </div>
