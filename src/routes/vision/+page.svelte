@@ -41,49 +41,48 @@
         <p class="text-xl mt-2">A cross-chain aware address labelling service</p>
     </div>
 
-    <div class="rounded-2xl p-4">
-        <h2 class="font-bold text-3xl mb-2">The future of crypto is cross-chain</h2>
-        <hr class="my-3">
-        <div class="grid auto-cols-600">
-            <div class="pr-16 flex flex-col justify-around p-3">
-                <p>
-                    Every week we see new blockchains, protocols appear in the space.
-                    For some people all those new technologies are exciting, but the majority of users will only ever touch a small subset of all blockchains.
-                </p>
-                <br>
-                <h3 class="font-bold text-lg">We see a few issues that arise from having so many blockchains:</h3>
-                <ul class="pl-6 list-disc">
-                    <li>
-                        Each chain comes with its own set of software
-                        => Wallets, DApps, ...
-                    </li>
-                    <li>
-                        Uncertainty around addresses
-                        => Which blockchain does each address belong to?
-                    </li>
-                    <li>
-                        Difficulty to understand the matter for less experienced users
-                    </li>
-                    <li>
-                        Accepting / Sending payments always requires negotiating a payment network
-                    </li>
-                </ul>
+    <hr class="my-3">
 
-                <br>
+    <div class="grid auto-cols-600 p-3">
+        <div class="pr-16 flex flex-col justify-around pl-4">
+            <h2 class="font-bold text-3xl mb-2">The future of crypto is cross-chain</h2>
+            <p>
+                Every week we see new blockchains, protocols appear in the space.
+                For some people all those new technologies are exciting, but the majority of users will only ever touch a small subset of all blockchains.
+            </p>
+            <br>
+            <h3 class="font-bold text-lg">We see a few issues that arise from having so many blockchains:</h3>
+            <ul class="pl-6 list-disc">
+                <li>
+                    Each chain comes with its own set of software
+                    => Wallets, DApps, ...
+                </li>
+                <li>
+                    Uncertainty around addresses
+                    => Which blockchain does each address belong to?
+                </li>
+                <li>
+                    Difficulty to understand the matter for less experienced users
+                </li>
+                <li>
+                    Accepting / Sending payments always requires negotiating a payment network
+                </li>
+            </ul>
 
-                <h3 class="font-bold text-lg">We are competing with a system that is way simpler and more user friendly!</h3>
-                <p>
-                    It is time to bring all the tech that was built in crypto over the last years to use!
-                    We need accessibility and ease of access. No compromises.
-                </p> 
-            </div>
-            <div class="border border-solid m-2 rounded-xl overflow-hidden">
-                <CrossChainVisualization></CrossChainVisualization>
-            </div>
+            <br>
+
+            <h3 class="font-bold text-lg">We are competing with a system that is way simpler and more user friendly!</h3>
+            <p>
+                It is time to bring all the tech that was built in crypto over the last years to use!
+                We need accessibility and ease of access. No compromises.
+            </p> 
+        </div>
+        <div class="border border-solid m-2 rounded-xl overflow-hidden">
+            <CrossChainVisualization></CrossChainVisualization>
         </div>
     </div>
 
-    <div class="flex items-center justify-center accent mt-3 h-max p-2">
+    <div class="text-center accent mt-3 h-max p-2 primary-accent-gradient">
         <h1 class="font-bold text-5xl">Why address labels?</h1>
     </div>
 
@@ -117,7 +116,7 @@
         </div>
     </div>
 
-    <div class="flex items-center justify-center accent mt-3 h-max p-2">
+    <div class="text-center accent mt-3 h-max p-2 primary-accent-gradient">
         <h1 class="font-bold text-5xl">Why not choose an existing solution?</h1>
     </div>
 
@@ -153,7 +152,7 @@
         </li>
     </ul>
 
-    <div class="flex items-center justify-center accent mt-3 h-max p-2">
+    <div class="text-center accent mt-3 h-max p-2 primary-accent-gradient">
         <h1 class="font-bold text-5xl">About us</h1>
     </div>
 
@@ -202,6 +201,10 @@
     }
     .auto-cols-600 {
         grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
+    }
+
+    .primary-accent-gradient {
+        background: linear-gradient(30deg, var(--primary-color), var(--accent-color));
     }
 
     @media (min-width: 700px) {
