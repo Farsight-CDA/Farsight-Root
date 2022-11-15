@@ -121,7 +121,7 @@
         <h1 class="font-bold text-5xl">Why not choose an existing solution?</h1>
     </div>
 
-    <ul class="grid auto-cols-250">
+    <ul class="grid auto-cols-300">
         <li class="p-3">
             <Advantage
                 image={price}
@@ -157,7 +157,7 @@
         <h1 class="font-bold text-5xl">About us</h1>
     </div>
 
-    <ul class="grid auto-cols-350">
+    <ul class="grid auto-cols-400">
         <li class="p-3">
             <AboutUs
                     image={leon}
@@ -194,11 +194,11 @@
 
 
 <style>
-    .auto-cols-250 {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .auto-cols-300 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .auto-cols-350 {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    .auto-cols-400 {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
     .auto-cols-600 {
         grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
