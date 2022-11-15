@@ -184,14 +184,12 @@
 						ctx.beginPath();
 
 						if (left.hover || right.hover) {
-							ctx.strokeStyle = "#ffffff";
-							ctx.lineWidth = 6;
-						}
-						else {
-							ctx.strokeStyle = lineColor;
-							ctx.lineWidth = 1;
+							return;
 						}
 
+						ctx.strokeStyle = lineColor;
+						ctx.lineWidth = 1;
+						
 						ctx.moveTo(left.posX * width, left.posY * height * widthToHeightRatio);
 						ctx.lineTo(right.posX * width, right.posY * height * widthToHeightRatio);
 

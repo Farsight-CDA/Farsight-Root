@@ -9,7 +9,7 @@
     let twitterURL = "https://twitter.com/" + twitterHandle;
 </script>
 
-<div class="relative accent h-full flex flex-col justify-start items-center border-solid border p-3 rounded-2xl">
+<div class="relative highlight h-full flex flex-col justify-start items-center border-solid border p-3 rounded-2xl">
     <a class="absolute top-5 right-5 w-10" href={twitterURL}>
         <img src={twitter} alt=""/>
     </a>
@@ -18,7 +18,7 @@
         <img class="rounded-max" src={image} alt="Avatar">
     </div>
         
-    <hr class="primary w-3/4 my-3" />
+    <hr class="w-3/4 my-3" />
 
     <div class="p-2 h-full flex-col justify-around flex">
         <h2 class="font-bold mb-1">{name}</h2>

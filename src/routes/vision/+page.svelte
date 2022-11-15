@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#FF0000">
 </svelte:head>
 
-<div class="mx-10 mt-3 relative">
+<div class="mt-3 relative">
 
     <a  class="w-12 absolute top-5 right-5"
         href="https://twitter.com/FarsightNames" target="_blank" rel="noreferrer">
@@ -37,11 +37,7 @@
             <p class="text-xl mt-2">A cross-chain aware address labelling service</p>
     </div>
 
-    <br>
-    <hr>
-    <br>
-
-    <div class="accent rounded-2xl p-4">
+    <div class="rounded-2xl p-4">
         <h2 class="font-bold text-3xl mb-2">The future of crypto is cross-chain</h2>
         <hr class="my-3">
         <div class="grid auto-cols-600">
@@ -83,8 +79,7 @@
         </div>
     </div>
 
-    <hr class="my-6">
-    <div class="flex items-center justify-center accent mt-3 h-max p-2 rounded-2xl">
+    <div class="flex items-center justify-center accent mt-3 h-max p-2">
         <h1 class="font-bold text-5xl">Why address labels?</h1>
     </div>
 
@@ -117,12 +112,8 @@
             </div>
         </div>
     </div>
-    <br>
-    <hr>
-    <br>
 
-
-    <div class="flex items-center justify-center accent mt-3 h-max p-2 rounded-2xl">
+    <div class="flex items-center justify-center accent mt-3 h-max p-2">
         <h1 class="font-bold text-5xl">Why not choose an existing solution?</h1>
     </div>
 
@@ -158,7 +149,7 @@
         </li>
     </ul>
 
-    <div class="flex items-center justify-center accent mt-3 h-max p-2 rounded-2xl">
+    <div class="flex items-center justify-center accent mt-3 h-max p-2">
         <h1 class="font-bold text-5xl">About us</h1>
     </div>
 

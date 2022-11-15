@@ -8,7 +8,7 @@
 <div class="w-screen h-screen flex flex-col">
 	<Header />
 
-	<main class="primary w-full h-full overflow-auto">
+	<main class="background w-full h-full overflow-auto">
 		<slot />
 	</main>
 
