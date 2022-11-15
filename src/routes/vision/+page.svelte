@@ -201,6 +201,6 @@
     }
 
     a {
-        color: greenyellow;
+        color: var(--link-color);
     }
 </style>
