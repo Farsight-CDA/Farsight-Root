@@ -25,16 +25,20 @@
     <meta name="theme-color" content="#FF0000">
 </svelte:head>
 
-<div class="mt-3 relative">
+<div>
+    <div class="relative flex flex-col justify-between items-center text-center px-6 pt-6">
+        <div class="collapsable font-bold text-5xl">
+            <h1>Farsight</h1>
+            <h1>-</h1>
+            <h1>Names</h1>
+        </div>
+        
+        <a  class="w-12 absolute top-7 right-5"
+            href="https://twitter.com/FarsightNames" target="_blank" rel="noreferrer">
+            <img src={twitter} alt=""/>
+        </a>
 
-    <a  class="w-12 absolute top-5 right-5"
-        href="https://twitter.com/FarsightNames" target="_blank" rel="noreferrer">
-        <img src={twitter} alt=""/>
-    </a>
-
-    <div class="flex flex-col justify-between items-center">
-            <h1 class="font-bold text-5xl">Farsight - Names</h1>
-            <p class="text-xl mt-2">A cross-chain aware address labelling service</p>
+        <p class="text-xl mt-2">A cross-chain aware address labelling service</p>
     </div>
 
     <div class="rounded-2xl p-4">
@@ -199,6 +203,14 @@
     .auto-cols-600 {
         grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
     }
+
+    @media (min-width: 700px) {
+        .collapsable {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
 
     a {
         color: var(--link-color);
