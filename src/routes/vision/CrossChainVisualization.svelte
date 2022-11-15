@@ -11,7 +11,6 @@
 	import {onMount} from "svelte";
 
 	export let lineThreshold: number = 0.45;
-	export let lineColor: string = "#f88a13";
 	export let speed: number = 0.06;
 	export let iconSize: number = 0.75;
 
@@ -34,6 +33,11 @@
 	}
 
 	onMount(() => {
+		const highlightColor = getComputedStyle(document.documentElement).getPropertyValue("--hightlight-color");
+		const lineColor = getComputedStyle(document.documentElement).getPropertyValue("--accent-color");
+
+		console.log(lineColor);
+
 		function makeIcon(image: string): IconAnimationState {
 			var img = new Image();
 			img.src = image;
@@ -155,7 +159,8 @@
 			canvas.width = width;
 			canvas.height = height;
 
-			ctx.clearRect(0, 0, width, height);
+			ctx.fillStyle = highlightColor;
+			ctx.fillRect(0, 0, width, height)
 
 			icons.forEach(icon => {
 				const absoluteRadiusX = icon.radius * width;
@@ -240,7 +245,7 @@
 	});
 </script>
 
-<div class="w-full h-big" bind:this={container}>
+<div class="w-full h-big overflow-hidden" bind:this={container}>
     <canvas
 		bind:this={canvas}
 		on:mousemove={handleMouseMove}

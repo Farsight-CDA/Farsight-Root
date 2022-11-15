@@ -1,22 +1,29 @@
+:root {
+	--background-color: white;
+	--hightlight-color: #e8eaee;
+	--primary-color: #006dff;
+	--accent-color: #c600d5;
+}
+
 body {
 	font-family: 'Domine', serif;
 	color: black;
-	background-color: white;
+	background-color: var(--background-color);
 }
 
 .highlight {
-	background-color: #e8eaee;
+	background-color: var(--hightlight-color);
 }
 
 .primary {
-	background-color: #006dff;
+	background-color: var(--primary-color);
 }
 
 .accent {
-	background-color: #c600d5;
+	background-color: var(--accent-color);
 }
 
 hr {
 	height: 3px !important;
-	background-image: linear-gradient(to right, transparent, gray, black, gray, transparent) !important;
+	background-image: linear-gradient(to right, var(--background-color), black, var(--background-color)) !important;
 }
